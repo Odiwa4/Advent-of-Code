@@ -53,3 +53,4 @@ elapsedTime = endTime-startTime
 print(f"Time: {elapsedTime:.6f}")
 print(f"Part One: {possible}")
 print(f"Part Two: {answer}")
+input("")

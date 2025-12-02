@@ -11,3 +11,9 @@
 **/obj/
 .history/
 *.vsix
+
+.zig-cache/
+zig-out/
+*.o
+
+abandonded folder/

@@ -9,7 +9,7 @@ with open (path, 'r') as d:
         reports[i] = [int(item) for item in reports[i]]
     d.close()
 
-def CheckSafe(list):
+def CheckSafe(list): 
     #EITHER ALL DECREASING OR ALL INCREASING
     #NUMBERS DONT INCREASE/DECREASE MORE THAN 3
     #IF ONE NUMBER CAN BE REMOVED TO FIX IT, IT PASSES
