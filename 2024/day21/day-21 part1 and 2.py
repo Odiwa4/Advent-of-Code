@@ -4,12 +4,11 @@ This solution is not original, this problem was difficult, and
 once you've looked up the solution in the same language well,
 its hard not to just remake their code I guess,
 
-anyway
+If anyone is reading this, which (lets be honest) they aren't.
+This solution is *not* original, this problem was difficult so
 credit goes to:
 https://github.com/hyperneutrino/advent-of-code/blob/main/2024/day21p2.py
 for the much smarter solution then the mess I tried before.
-
-also I forgot to include them in day 16, but I used a similar solution by them as well
 '''
 import os
 from collections import deque
