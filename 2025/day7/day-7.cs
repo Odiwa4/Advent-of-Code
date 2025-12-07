@@ -31,7 +31,7 @@ public class Day7
 
 		long part2Answer = 0;
 
-		int accessablelongs = 0;
+		int accessableSplitters = 0;
 		foreach (IVector2 splitterPos in splitters.Keys)
 		{
 			long splitter = splitters[splitterPos];
@@ -44,7 +44,7 @@ public class Day7
 
 				if (ULState == "^" || URState == "^" || upState == "S")
 				{
-					accessablelongs++;
+					accessableSplitters++;
 					break;
 				}
 
@@ -92,7 +92,7 @@ public class Day7
 			}
 		}
 
-		Console.WriteLine("Part 1: " + accessablelongs);
+		Console.WriteLine("Part 1: " + accessableSplitters);
 		Console.WriteLine("Part 2: " + part2Answer);
 	}
 
