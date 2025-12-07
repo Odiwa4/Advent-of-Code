@@ -56,37 +56,36 @@ public class Day7
 
 		}
 
-		Dictionary<IVector2, long> resultDict = new Dictionary<IVector2, long>();
 		for (int y = 0; y < height; y++)
 		{
-			List<IVector2> currentlongs = new List<IVector2>();
+			List<IVector2> currentSplitters = new List<IVector2>();
 			for (int x = 0; x < width; x++)
 			{
 				if (splitters.ContainsKey(new IVector2(x, y)))
-					currentlongs.Add(new IVector2(x, y));
+					currentSplitters.Add(new IVector2(x, y));
 			}
 
-			if (currentlongs.Count == 0)
+			if (currentSplitters.Count == 0)
 				continue;
 
 			if (y == 2)
-				splitters[currentlongs[0]] = 1;
+				splitters[currentSplitters[0]] = 1;
 
-			foreach (IVector2 sPos in currentlongs)
+			foreach (IVector2 sPos in currentSplitters)
 			{
 				IVector2 left = new IVector2(sPos.x - 1, sPos.y);
 				IVector2 right = new IVector2(sPos.x + 1, sPos.y);
 
-				IVector2 leftlong = Nextlong(left, map, width, height);
-				IVector2 rightlong = Nextlong(right, map, width, height);
+				IVector2 leftSplitter = NextSplitter(left, map, width, height);
+				IVector2 rightSplitter = NextSplitter(right, map, width, height);
 
-				if (leftlong.x != -1)
-					splitters[leftlong] += splitters[sPos];
+				if (leftSplitter.x != -1)
+					splitters[leftSplitter] += splitters[sPos];
 				else
 					part2Answer += splitters[sPos];
 
-				if (rightlong.x != -1)
-					splitters[rightlong] += splitters[sPos];
+				if (rightSplitter.x != -1)
+					splitters[rightSplitter] += splitters[sPos];
 				else
 					part2Answer += splitters[sPos];
 			}
@@ -101,7 +100,7 @@ public class Day7
 		return pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < height;
 	}
 
-	static IVector2 Nextlong(IVector2 startPos, string[,] map, int width, int height)
+	static IVector2 NextSplitter(IVector2 startPos, string[,] map, int width, int height)
 	{
 		IVector2 newPos = new IVector2(startPos.x, startPos.y + 1);
 		while (true)
