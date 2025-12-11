@@ -8,6 +8,9 @@
 `,| | |   ,-. .  , . ,-.   `- |   |-. ,-. ,-. |- ,-. ,-.  
   | ; | . | | | /  | |-'    , |   | | |-' ,-| |  |   |-'  
   '   `-' `-' `'   ' `-'    `-'   ' ' `-' `-^ `' '   `-'  
+
+this isnt the best solution but it does work with the input we are given
+this doesnt not work generally however
 */
 using System.Numerics;
 
