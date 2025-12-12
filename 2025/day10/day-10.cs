@@ -15,6 +15,7 @@
 part 1 is my own solution
 part 2 is not
 i knew z3 could do it, i just didnt know how z3 worked
+so code using z3 is not original but hey it works
 */
 using Microsoft.Z3;
 public class Day10
